@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #d9e4f5;
+background-image: linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
+
+}
+.header{
+  background-color: #000000;
+background-image: linear-gradient(315deg, #000000 0%, #b82e1f 74%);
+}
+.container{
+  width: 600px;
+  background: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 30px 35px 10px 35px;
+}
+.container header{
+  margin-top:50px;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+}
+.login_page{
+  margin-right: 100px;
+}
+.details{
+  margin-top: -50px;
+}
+input[type="password"],input[type="email"],input[type="text"]{
+  width: 90%;
+  padding: 12px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  resize: vertical;
+  color: black;
+  outline: 0px;
+
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  text-align: left;
+  padding: 8px;
+}
+.btn {
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 90%;
+}
+.payable{
+  margin-left: 200px;
+}
+.btn:hover {
+  background-color: #45a049;
+}
+.details{
+  text-align: center;
+}
+.container .form-outer{
+  width: 100%;
+  overflow: hidden;
+}
+.container .form-outer .details{
+  display: flex;
+  width: 400%;
+}
+.form-outer .details .page{
+  width: 25%;
+  transition: margin-left 0.3s ease-in-out;
+}
+.form-outer .details .page .title{
+  text-align: left;
+  font-size: 25px;
+  font-weight: 500;
+}
+.form-outer .details .page .field{
+  width: 330px;
+  height: 45px;
+  margin: 45px 0;
+  display: flex;
+  position: relative;
+}
+.details .page .field .label{
+  position: absolute;
+  top: -30px;
+  font-weight: 500;
+}
+.details .page .field input{
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-left: 15px;
+  font-size: 18px;
+}
+.details .page .field select{
+  width: 100%;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 500;
+}
+.details .page .field button{
+  width: 100%;
+  height: calc(100% + 5px);
+  border: none;
+  background: #d33f8d;
+  margin-top: -20px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+.details .page .field button:hover{
+  background: #000;
+}
+.details .page .btns button{
+  margin-top: -20px!important;
+}
+.details .page .btns button.prev{
+  margin-right: 3px;
+  font-size: 17px;
+}
+.details .page .btns button.next{
+  margin-left: 3px;
+}
+.container .progress-bar{
+  display: flex;
+  margin: 40px 0;
+  user-select: none;
+}
+.container .progress-bar .step{
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+.container .progress-bar .step p{
+  font-weight: 500;
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 8px;
+}
+.progress-bar .step .bullet{
+  height: 25px;
+  width: 25px;
+  border: 2px solid #000;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 30px;
+
+}
+.progress-bar .step .bullet.active{
+  border-color:green;
+  background:green;
+}
+.progress-bar .step .bullet span{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.progress-bar .step .bullet.active span{
+  display: none;
+}
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after{
+   position: absolute;
+  content: '';
+  bottom: 11px;
+  right: -120px;
+  height: 3px;
+  width: 119px;
+  background: #262626;
+}
+.progress-bar .step .bullet.active:after{
+  background:green;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 0.3s linear forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after{
+  display: none;
+}
+.progress-bar .step p.active{
+  color:green;
+  transition: 0.2s linear;
+}
+.progress-bar .step .check{
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  font-size: 15px;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.progress-bar .step .check.active{
+  display: block;
+  color: #fff;
+}
