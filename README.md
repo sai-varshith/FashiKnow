@@ -1,1 +1,1 @@
-
+<h3>FashiKnow is the Simple shopping Solution.It’s a full- featured website and shopping cart system that bends over backwards to give us the flexibility we need to run our online store.The basic concept of the application is to allow the customer to shop virtually using the Internet and allow customers to buy the items and articles of their desire from the store. </h3>
